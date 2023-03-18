@@ -23,14 +23,14 @@ func TestCheckForLabel(t *testing.T) {
 	}
 
 	t.Run("nonexistent label", func(t *testing.T) {
-		labelExists := checkForLabel(labels, "label 4")
+		labelExists := checkForLabel(labels, "Label 4")
 		if labelExists {
 			t.Fatal("expected label to not exist")
 		}
 	})
 
 	t.Run("existing label", func(t *testing.T) {
-		labelExists := checkForLabel(labels, "label 2")
+		labelExists := checkForLabel(labels, "Label 2")
 		if !labelExists {
 			t.Fatal("expected label to exist")
 		}
