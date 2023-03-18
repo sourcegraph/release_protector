@@ -1,0 +1,13 @@
+name: 'release_protector'
+description: 'Protects a release by notifying authors of new pull requests about the backporting functionality.'
+author: Sourcegraph
+inputs:
+  releaseTag:
+    description: 'Release (tag) to be protected. Example (5.0).'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+branding:
+  icon: 'bell'
+  color: 'yellow'
