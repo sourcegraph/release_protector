@@ -42,8 +42,8 @@ func main() {
 	if !shouldBackport && !shouldNotBackport {
 		var commentBody = fmt.Sprintf(`❌ Label 'confirm-no-backport' or '%s' is absent
 
-	👉 We're in the next Sourcegraph release code freeze period. If you are 100%% sure your changes should get released or provide no risk to the release, add the 'backport 5.0' label your PR. If you don't want to include this change, add 'confirm-no-backport' to merge into main without backport.
-	To learn more about backporting, see the handbook https://handbook.sourcegraph.com/departments/engineering/dev/tools/backport/#how-should-i-use-the-backporting-tool
+👉 We're in the next Sourcegraph release code freeze period. If you are 100%% sure your changes should get released or provide no risk to the release, add the 'backport 5.0' label your PR. If you don't want to include this change, add 'confirm-no-backport' to merge into main without backport.
+To learn more about backporting, see the handbook https://handbook.sourcegraph.com/departments/engineering/dev/tools/backport/#how-should-i-use-the-backporting-tool
 	`, releaseTag)
 
 		comment := &github.IssueComment{
